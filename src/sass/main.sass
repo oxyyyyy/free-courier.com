@@ -1,0 +1,103 @@
+// TODO: 1. Доверстать страницу
+
+// Import vars
+@import "_vars.sass"
+
+// Null padding and margin of all elements
+*
+  margin: 0
+  padding: 0
+
+body
+  font-family: $light_font
+  color: $font_color
+
+// Editing bootstrap menu
+.navbar
+  padding: 0
+.navbar-toggler
+  border: none
+  left: 0
+  padding: 0
+  margin: 8px 0
+  p
+    display: inline-block
+    font-family: $medium_font
+    text-transform: uppercase
+    margin-bottom: 0
+.navbar-collapse.show, .navbar-collapse.collapsing
+  margin-top: 40px
+.navbar-nav
+  padding: 0
+.nav-item
+  .nav-link
+    font-family: $medium_font
+    font-size: 13.5px
+.nav-item.active
+  .nav-link
+    color: $accent_color_1 !important
+
+// Top panel
+.top_panel
+  padding: 8px 0
+  background-color: $top_panel_color
+  border-bottom: 1px solid #cdcfd1
+.logo
+  display: inline-block
+  .logo_title, .logo_subtitle
+    display: inline-block
+    margin: 0
+  .logo_title
+    font-family: $black_italic_font
+    span
+      color: $accent_color_1
+  .logo_subtitle
+    font-family: $light_font
+    font-size: 10.5px
+
+// Login form
+.login_form
+  input
+    width: 150px !important
+    height: 30px
+    border-radius: 1px
+  #password_forgot
+    position: absolute
+    top: 26px
+    right: 0
+    a
+      color: $accent_color_1
+      border-bottom: 1px dashed $accent_color_1
+      &:hover
+        text-decoration: none
+  .btn_own
+    line-height: .9
+    width: 95px
+    cursor: pointer
+
+// Buttons
+.btn_own
+  font-family: $medium_font
+  font-size: 13.5px
+  color: #fff
+  border-radius: 1px
+  &:hover
+    color: #fff
+.btn--accent1
+  background-image: -moz-linear-gradient( 90deg, rgb(243,158,9) 0%, rgb(248,192,94) 100%)
+  background-image: -webkit-linear-gradient( 90deg, rgb(243,158,9) 0%, rgb(248,192,94) 100%)
+  background-image: -ms-linear-gradient( 90deg, rgb(243,158,9) 0%, rgb(248,192,94) 100%)
+.btn--accent2
+  background-image: -moz-linear-gradient( 90deg, rgb(0,149,254) 0%, rgb(130,209,255) 100%)
+  background-image: -webkit-linear-gradient( 90deg, rgb(0,149,254) 0%, rgb(130,209,255) 100%)
+  background-image: -ms-linear-gradient( 90deg, rgb(0,149,254) 0%, rgb(130,209,255) 100%)
+
+
+
+// Desktop version
+@media (min-width: $mobile)
+  .navbar-nav
+    width: 100%
+    margin: 10px 0
+  .top_panel
+    padding: 25px 0
