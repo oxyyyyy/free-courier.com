@@ -3,21 +3,41 @@
 // Import vars
 @import "_vars.sass"
 
+
+
+
 // Null padding and margin of all elements
 *
   margin: 0
   padding: 0
 
+
+// Setting up body fonts
 body
   font-family: $light_font
   color: $font_color
+  a
+    transition: .3s
+
+
+// Top top mobile title
+.top_top_mobile_title
+  background-color: $top_top_mobile_panel_color
+  text-align: center
+  padding: 3px 0
+  h4
+    font-family: $light_font
+    font-size: 14px
+    color: #000
+    margin: 0
+
 
 // Editing bootstrap menu
 .navbar
   padding: 0
 .navbar-toggler
   border: none
-  left: 0
+  position: static
   padding: 0
   margin: 8px 0
   p
@@ -25,10 +45,9 @@ body
     font-family: $medium_font
     text-transform: uppercase
     margin-bottom: 0
-.navbar-collapse.show, .navbar-collapse.collapsing
-  margin-top: 40px
 .navbar-nav
   padding: 0
+  margin-bottom: 15px
 .nav-item
   .nav-link
     font-family: $medium_font
@@ -37,7 +56,13 @@ body
   .nav-link
     color: $accent_color_1 !important
 
+
 // Top panel
+.top_logo_link
+  color: inherit
+  &:hover
+    color: inherit
+    text-decoration: none
 .top_panel
   padding: 8px 0
   background-color: $top_panel_color
@@ -54,6 +79,7 @@ body
   .logo_subtitle
     font-family: $light_font
     font-size: 10.5px
+
 
 // Login form
 .login_form
@@ -75,22 +101,86 @@ body
     width: 95px
     cursor: pointer
 
+
+// Header + header items
+header
+  background-image: url("../img/header_bg.png")
+  background-size: cover
+  background-position: center
+  .overlay_header
+    background-color: $overlay_header_color
+    padding: 30px 0
+// Main header title
+h1
+  text-transform: uppercase
+  text-align: center
+  font-family: $medium_font
+  font-size: 27px
+  margin-bottom: 20px
+  padding: 20px
+  background-color: $overlay_h1_color
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 80%, 52% 100%, 0 80%)
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 52% 100%, 0 80%)
+// Header main cards
+.square_header_card
+  border: 5px solid #fff
+  color: #fff
+  font-size: 18px
+  height: 260px
+  width: 260px
+  margin-bottom: 15px
+  text-align: center
+  h3
+    font-family: $medium_font
+    font-size: 18px
+    margin-top: 15px
+    margin-bottom: 35px
+  .header_card_adventure_list
+    font-family: $light_font
+    list-style-type: none
+    .header_card_adventure
+      margin: 7px 0
+      &::after
+        content: ''
+        display: block
+        background-color: #fff
+        width: 150px
+        height: 1px
+        position: relative
+        left: 20%
+        top: 4px
+      &:last-child
+        &::after
+          content: none
+  .btn_own
+    margin-top: 20px
+
+
 // Buttons
 .btn_own
   font-family: $medium_font
   font-size: 13.5px
   color: #fff
+  border: 1px solid rgba(0,0,0,.01)
   border-radius: 1px
-  &:hover
+  &:hover, &:visited
     color: #fff
 .btn--accent1
   background-image: -moz-linear-gradient( 90deg, rgb(243,158,9) 0%, rgb(248,192,94) 100%)
   background-image: -webkit-linear-gradient( 90deg, rgb(243,158,9) 0%, rgb(248,192,94) 100%)
   background-image: -ms-linear-gradient( 90deg, rgb(243,158,9) 0%, rgb(248,192,94) 100%)
+  &:hover
+    background-image: -moz-linear-gradient( 90deg, rgb(243,158,9) 60%, rgb(248,192,94) 100%)
+    background-image: -webkit-linear-gradient( 90deg, rgb(243,158,9) 60%, rgb(248,192,94) 100%)
+    background-image: -ms-linear-gradient( 90deg, rgb(243,158,9) 60%, rgb(248,192,94) 100%)
 .btn--accent2
   background-image: -moz-linear-gradient( 90deg, rgb(0,149,254) 0%, rgb(130,209,255) 100%)
   background-image: -webkit-linear-gradient( 90deg, rgb(0,149,254) 0%, rgb(130,209,255) 100%)
   background-image: -ms-linear-gradient( 90deg, rgb(0,149,254) 0%, rgb(130,209,255) 100%)
+  &:hover
+    background-image: -moz-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
+    background-image: -webkit-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
+    background-image: -ms-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
 
 
 
@@ -101,3 +191,10 @@ body
     margin: 10px 0
   .top_panel
     padding: 25px 0
+  header
+    .header_card_row
+      padding: 0 15%
+@media (max-width: $tablet)
+  header
+    .header_card_row
+      padding: 0

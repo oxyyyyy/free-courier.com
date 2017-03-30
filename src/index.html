@@ -13,15 +13,24 @@
     <link rel="stylesheet" href="css/bundle.libs.min.css">
     <link rel="stylesheet" href="css/main.min.css">
 
+    <!-- Font-awesome -->
+    <script src="https://use.fontawesome.com/18ebe339c9.js"></script>
+
 </head>
 
 <body>
+
+    <!-- Top top mobile title -->
+    <div class="hidden-md-up top_top_mobile_title">
+        <h4>Поиск курьеров по всей России</h4>
+    </div>
 
     <!-- Top panel (logo img + logo title + login form) -->
     <div class="top_panel">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <!-- Logo with logo title -->
+                <a class="top_logo_link" href="#">
                 <div class="logo d-flex">
                     <img class="img-fluid align-middle" src="img/logo.png" alt="">
                     <div class="d-flex flex-column justify-content-center">
@@ -29,6 +38,7 @@
                         <p class="hidden-sm-down logo_subtitle">Поиск курьеров по всей России</p>
                     </div>
                 </div>
+                </a>
                 <!-- Login form on desktops -->
                 <form class="form-inline hidden-sm-down login_form">
                     <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="login" placeholder="Логин" required>
@@ -47,10 +57,11 @@
     <div class="container">
         <!-- Navigation -->
         <nav class="navbar navbar-toggleable-sm navbar-light">
+            <!-- Mobile hamburger -->
             <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon align-middle"></span>
-          <p class="align-middle">открыть меню</p>
-        </button>
+              <i class="fa fa-bars fa-lg align-middle" aria-hidden="true"></i>
+              <p class="align-middle">открыть меню</p>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto d-md-flex justify-content-md-around">
                     <li class="nav-item active">
@@ -75,6 +86,41 @@
             </div>
         </nav>
     </div>
+
+    <!-- Header -->
+    <header>
+        <div class="overlay_header">
+            <div class="container">
+                <!-- Main header title -->
+                <div class="row">
+                    <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                        <h1 class="animated fadeInDown">удобный сервис для курьеров и заказчиков</h1>
+                    </div>
+                </div>
+                <!-- Main header cards flex-row -->
+                <div class="d-flex flex-row justify-content-around flex-wrap header_card_row">
+                    <div class="square_header_card animated fadeInLeft">
+                        <h3>Курьерам:</h3>
+                        <ul class="header_card_adventure_list">
+                            <li class="header_card_adventure">Заказы рядом с Вами</li>
+                            <li class="header_card_adventure">Гибкий график работы</li>
+                            <li class="header_card_adventure">Своевременная оплата</li>
+                        </ul>
+                        <a class="btn btn_own btn--accent1" href="#">Стать курьером</a>
+                    </div>
+                    <div class="square_header_card animated fadeInRight">
+                        <h3>Заказчикам:</h3>
+                        <ul class="header_card_adventure_list">
+                            <li class="header_card_adventure">Самая низкая цена</li>
+                            <li class="header_card_adventure">Без лишних оформлений</li>
+                            <li class="header_card_adventure">Все виды доставок</li>
+                        </ul>
+                        <a class="btn btn_own btn--accent2" href="#">Оформить доставку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Concatinated and minified scripts -->
     <script src="js/libs.min.js"></script>
