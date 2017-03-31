@@ -154,10 +154,13 @@ section#security
   padding: 10px 0
   margin: 15px 0
   font-family: $light_font
+  .security_title
+    width: 250px
+    margin: auto
   .underlined_separator
     &::after
       background-color: #dbdbdb
-      left: 43.2%
+      left: 20%
       top: 6px
   img
     margin-right: 10px
@@ -178,7 +181,7 @@ section#customer_bullets
   background-color: $accent_color_2
   border-radius: 50%
   margin: 30px 15px 40px 15px
-  padding: 25px 30px 0 30px
+  padding: 25px 15px 0 15px
   box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.75)
   background: rgb(51,170,254)
   background: -moz-linear-gradient(top,  rgba(51,170,254,1) 35%, rgba(255,255,255,1) 35%)
@@ -187,20 +190,24 @@ section#customer_bullets
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33aafe', endColorstr='#ffffff',GradientType=0 )
   // Bullet arrows
   &:first-child
+    ul
+      margin: 35px 0
     &::before
       content: url('../img/bullet_arrow_top.png')
       position: absolute
       left: 37.5%
+      top: 18%
       @media (max-width: 1199px)
         left: 35%
       @media (max-width: 991px)
         left: 30%
       @media (max-width: 767px)
         left: 44%
+        top: 10%
       @media (max-width: 490px)
-        top: 33%
-        left: 60%
-        transform: rotate(90deg)
+        content: url('../img/bullet_arrow_straight.png')
+        top: 33.5%
+        left: 48%
   &:last-child
     &::before
       content: url('../img/bullet_arrow_bottom.png')
@@ -217,17 +224,31 @@ section#customer_bullets
         bottom: 46%
         left: 71%
       @media (max-width: 490px)
-        transform: rotate(90deg)
-        top: 64%
-        left: 75%
+        content: url('../img/bullet_arrow_straight.png')
+        transform: none
+        top: 65.5%
+        left: 30%
   h3
     color: #fff
     font-family: $medium_font
     font-size: 15px
+    margin-bottom: 25px
+    padding: 0 15px
   ul
     list-style-type: none
     font-family: $light_font
     font-size: 12px
+    margin: -5px
+    li
+      margin: 3px 0
+      &::after
+        background-color: $accent_color_2
+        top: 1px
+        left: 29%
+        width: 75px
+      &:last-child
+        &::after
+          content: none
 
 
 // Buttons
@@ -255,6 +276,8 @@ section#customer_bullets
     background-image: -moz-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
     background-image: -webkit-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
     background-image: -ms-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
+
+  
 // Underline separator
 .underlined_separator
   &::after
