@@ -96,6 +96,7 @@ body
       border-bottom: 1px dashed $accent_color_1
       &:hover
         text-decoration: none
+        border-bottom: 1px solid $accent_color_1
   .btn_own
     line-height: .9
     width: 95px
@@ -140,20 +141,93 @@ h1
     list-style-type: none
     .header_card_adventure
       margin: 7px 0
-      &::after
-        content: ''
-        display: block
-        background-color: #fff
-        width: 150px
-        height: 1px
-        position: relative
-        left: 20%
-        top: 4px
       &:last-child
         &::after
           content: none
   .btn_own
     margin-top: 20px
+
+
+// Security section
+section#security
+  background-color: $muted_bg
+  padding: 10px 0
+  margin: 15px 0
+  font-family: $light_font
+  .underlined_separator
+    &::after
+      background-color: #dbdbdb
+      left: 43.2%
+      top: 6px
+  img
+    margin-right: 10px
+  a
+    text-decoration: none
+    font-size: 13.5px
+    color: $security_color
+    border-bottom: 1px dotted $security_color
+    &:hover
+      border-bottom: 1px solid $security_color
+
+
+// Customers' bullets section
+section#customer_bullets
+.round_bullet
+  width: 200px
+  height: 200px
+  background-color: $accent_color_2
+  border-radius: 50%
+  margin: 30px 15px 40px 15px
+  padding: 25px 30px 0 30px
+  box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.75)
+  background: rgb(51,170,254)
+  background: -moz-linear-gradient(top,  rgba(51,170,254,1) 35%, rgba(255,255,255,1) 35%)
+  background: -webkit-linear-gradient(top,  rgba(51,170,254,1) 35%,rgba(255,255,255,1) 35%)
+  background: linear-gradient(to bottom,  rgba(51,170,254,1) 35%,rgba(255,255,255,1) 35%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33aafe', endColorstr='#ffffff',GradientType=0 )
+  // Bullet arrows
+  &:first-child
+    &::before
+      content: url('../img/bullet_arrow_top.png')
+      position: absolute
+      left: 37.5%
+      @media (max-width: 1199px)
+        left: 35%
+      @media (max-width: 991px)
+        left: 30%
+      @media (max-width: 767px)
+        left: 44%
+      @media (max-width: 490px)
+        top: 33%
+        left: 60%
+        transform: rotate(90deg)
+  &:last-child
+    &::before
+      content: url('../img/bullet_arrow_bottom.png')
+      position: absolute
+      right: 37.5%
+      bottom: 9%
+      @media (max-width: 1199px)
+        right: 35%
+      @media (max-width: 991px)
+        right: 30%
+      @media (max-width: 767px)
+        content: url('../img/bullet_arrow_top.png')
+        transform: rotate(125deg)
+        bottom: 46%
+        left: 71%
+      @media (max-width: 490px)
+        transform: rotate(90deg)
+        top: 64%
+        left: 75%
+  h3
+    color: #fff
+    font-family: $medium_font
+    font-size: 15px
+  ul
+    list-style-type: none
+    font-family: $light_font
+    font-size: 12px
 
 
 // Buttons
@@ -181,7 +255,34 @@ h1
     background-image: -moz-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
     background-image: -webkit-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
     background-image: -ms-linear-gradient( 90deg, rgb(0,149,254) 60%, rgb(130,209,255) 100%)
-
+// Underline separator
+.underlined_separator
+  &::after
+    content: ''
+    display: block
+    background-color: #fff
+    width: 150px
+    height: 1px
+    position: relative
+    left: 20%
+    top: 4px
+// Titles
+h2.light
+  font-family: $light_font
+  font-size: 18px
+// Text align center
+section
+  text-align: center
+// Top border on sections
+.top_border_section
+  margin-top: 30px
+  border-top: 2px solid $accent_color_2
+  h2
+    position: relative
+    bottom: 11px
+    background-color: #fff
+    display: inline-block
+    width: 280px
 
 
 // Desktop version

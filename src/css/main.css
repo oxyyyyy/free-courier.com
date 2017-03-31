@@ -96,7 +96,8 @@ body {
     color: #f39e09;
     border-bottom: 1px dashed #f39e09; }
     .login_form #password_forgot a:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      border-bottom: 1px solid #f39e09; }
 
 .login_form .btn_own {
   line-height: .9;
@@ -140,19 +141,91 @@ h1 {
     list-style-type: none; }
     .square_header_card .header_card_adventure_list .header_card_adventure {
       margin: 7px 0; }
-      .square_header_card .header_card_adventure_list .header_card_adventure::after {
-        content: '';
-        display: block;
-        background-color: #fff;
-        width: 150px;
-        height: 1px;
-        position: relative;
-        left: 20%;
-        top: 4px; }
       .square_header_card .header_card_adventure_list .header_card_adventure:last-child::after {
         content: none; }
   .square_header_card .btn_own {
     margin-top: 20px; }
+
+section#security {
+  background-color: #f6f5f5;
+  padding: 10px 0;
+  margin: 15px 0;
+  font-family: "HelveticaNeueCyr-Light"; }
+  section#security .underlined_separator::after {
+    background-color: #dbdbdb;
+    left: 43.2%;
+    top: 6px; }
+  section#security img {
+    margin-right: 10px; }
+  section#security a {
+    text-decoration: none;
+    font-size: 13.5px;
+    color: #17a425;
+    border-bottom: 1px dotted #17a425; }
+    section#security a:hover {
+      border-bottom: 1px solid #17a425; }
+
+.round_bullet {
+  width: 200px;
+  height: 200px;
+  background-color: #33aafe;
+  border-radius: 50%;
+  margin: 30px 15px 40px 15px;
+  padding: 25px 30px 0 30px;
+  box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.75);
+  background: #33aafe;
+  background: -moz-linear-gradient(top, #33aafe 35%, white 35%);
+  background: -webkit-linear-gradient(top, #33aafe 35%, white 35%);
+  background: linear-gradient(to bottom, #33aafe 35%, white 35%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33aafe', endColorstr='#ffffff',GradientType=0 ); }
+  .round_bullet:first-child::before {
+    content: url("../img/bullet_arrow_top.png");
+    position: absolute;
+    left: 37.5%; }
+    @media (max-width: 1199px) {
+      .round_bullet:first-child::before {
+        left: 35%; } }
+    @media (max-width: 991px) {
+      .round_bullet:first-child::before {
+        left: 30%; } }
+    @media (max-width: 767px) {
+      .round_bullet:first-child::before {
+        left: 44%; } }
+    @media (max-width: 490px) {
+      .round_bullet:first-child::before {
+        top: 33%;
+        left: 60%;
+        transform: rotate(90deg); } }
+  .round_bullet:last-child::before {
+    content: url("../img/bullet_arrow_bottom.png");
+    position: absolute;
+    right: 37.5%;
+    bottom: 9%; }
+    @media (max-width: 1199px) {
+      .round_bullet:last-child::before {
+        right: 35%; } }
+    @media (max-width: 991px) {
+      .round_bullet:last-child::before {
+        right: 30%; } }
+    @media (max-width: 767px) {
+      .round_bullet:last-child::before {
+        content: url("../img/bullet_arrow_top.png");
+        transform: rotate(125deg);
+        bottom: 46%;
+        left: 71%; } }
+    @media (max-width: 490px) {
+      .round_bullet:last-child::before {
+        transform: rotate(90deg);
+        top: 64%;
+        left: 75%; } }
+  .round_bullet h3 {
+    color: #fff;
+    font-family: "HelveticaNeueCyr-Medium";
+    font-size: 15px; }
+  .round_bullet ul {
+    list-style-type: none;
+    font-family: "HelveticaNeueCyr-Light";
+    font-size: 12px; }
 
 .btn_own {
   font-family: "HelveticaNeueCyr-Medium";
@@ -180,6 +253,33 @@ h1 {
     background-image: -moz-linear-gradient(90deg, #0095fe 60%, #82d1ff 100%);
     background-image: -webkit-linear-gradient(90deg, #0095fe 60%, #82d1ff 100%);
     background-image: -ms-linear-gradient(90deg, #0095fe 60%, #82d1ff 100%); }
+
+.underlined_separator::after {
+  content: '';
+  display: block;
+  background-color: #fff;
+  width: 150px;
+  height: 1px;
+  position: relative;
+  left: 20%;
+  top: 4px; }
+
+h2.light {
+  font-family: "HelveticaNeueCyr-Light";
+  font-size: 18px; }
+
+section {
+  text-align: center; }
+
+.top_border_section {
+  margin-top: 30px;
+  border-top: 2px solid #33aafe; }
+  .top_border_section h2 {
+    position: relative;
+    bottom: 11px;
+    background-color: #fff;
+    display: inline-block;
+    width: 280px; }
 
 @media (min-width: 768px) {
   .navbar-nav {
