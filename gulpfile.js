@@ -30,6 +30,7 @@ gulp.task('scripts', function() {
             'node_modules/jquery/dist/jquery.js',
             'node_modules/tether/dist/js/tether.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/wowjs/dist/wow.min.js',
             '!src/libs/modernizr-custom.js'
         ])
         .pipe(concat('libs.min.js'))
